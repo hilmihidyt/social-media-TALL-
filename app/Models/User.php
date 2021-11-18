@@ -18,7 +18,10 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'hash',
         'name',
+        'username',
+        'picture',
         'email',
         'password',
     ];
@@ -41,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function gravatar($size = 150)
+    {
+        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $this->email ) ) ) . "?&s=" . $size;
+    }
 }
