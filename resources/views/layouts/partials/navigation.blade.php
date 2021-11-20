@@ -2,7 +2,7 @@
     <div class="flex justify-between items-center flex-col md:flex-row">
         <div class="flex justify-between px-4 py-4 bg-gray-900 md:bg-transparent md:border-b-0 w-full md:w-auto">
             <div>
-                <a href="" class="text-white font-semibold text-lg">
+                <a href="/" class="text-white font-semibold text-lg">
                 {{ config('app.name') }}
                 </a>
             </div>
@@ -34,7 +34,7 @@
                         </button>
                     </div>
                     <div :class="{'md:hidden': !dropdownIsOpen}" class="block md:absolute top-45 right-0 md:mr-4 mt-2 md:mt-15 md:bg-gray-700 md:w-56 md:rounded md:shadow md:py-2 leading-relaxed md:leading-loose">
-                        <a href="" class="block text-gray-400 hover:text-white px-4">Settings</a>
+                        <a href="{{ route('settings') }}" class="block text-gray-400 hover:text-white px-4">Settings</a>
                         <a href="" class="block text-gray-400 hover:text-white px-4">Your Profile</a>
                         <a href="" class="block text-gray-400 hover:text-white px-4">Your Friends</a>
                         <a href="{{ route('logout') }}"

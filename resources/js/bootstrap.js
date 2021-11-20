@@ -1,14 +1,19 @@
 import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 Alpine.start();
+// window._ = require('lodash');
 
 /**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-// import Echo from 'laravel-echo'
+// window.axios = require('axios');
+
+// window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+// import Echo from 'laravel-echo';
 
 // window.Pusher = require('pusher-js');
 
@@ -16,5 +21,12 @@ Alpine.start();
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
+//     forceTLS: process.env.MIX_PUSHER_APP_USE_SSL === "true",
+//     disableStats: true,
+//     wsHost: process.env.MIX_PUSHER_APP_HOST,
+//     wsPort: process.env.MIX_PUSHER_APP_PORT || null,
+// });
+
+// document.addEventListener('turbo:before-fetch-request', (e) => {
+//     e.detail.fetchOptions.headers['X-Socket-ID'] = window.Echo.socketId();
 // });
