@@ -18,7 +18,7 @@
         <div :class="{'hidden': !open}" class="leading-loose py-1 md:py-0 md:flex justify-between items-center w-full">
             <div class="flex flex-col md:flex-row md:items-center py-2 md:py-0">
                 <a href="#" class="block text-gray-400 hover:text-white px-4 md:py-4">Explore</a>
-                <a href="#" class="block text-gray-400 hover:text-white px-4 md:py-4">Timeline</a>
+                <a href="{{ route('timeline') }}" class="block text-gray-400 hover:text-white px-4 md:py-4">Timeline</a>
             </div>
             <div class="flex flex-col md:flex-row md:items-center">
                 @auth
